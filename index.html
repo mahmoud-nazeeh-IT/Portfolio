@@ -1291,6 +1291,35 @@
             margin-bottom: 25px;
             line-height: 1.6;
         }
+        .theme-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    border-color: #06b6d4;
+    transform: scale(1.05);
+}
+
+/* LIGHT MODE */
+body.light {
+    --bg-primary: #f5f7fb;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #e5e7eb;
+
+    --text-primary: #111827;
+    --text-secondary: #374151;
+    --text-muted: #6b7280;
+
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
     </style>
 </head>
 <body>
@@ -1315,6 +1344,7 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo">Nazeeh</div>
+        <button id="theme-toggle" class="theme-btn">🌙</button>
         <button class="mobile-menu-btn" id="mobile-menu-btn">
             <span></span>
             <span></span>
@@ -1923,6 +1953,17 @@
                 }
             });
         });
+        const toggleBtn = document.getElementById("theme-toggle");
+
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+
+    if (document.body.classList.contains("light")) {
+        toggleBtn.textContent = "☀️";
+    } else {
+        toggleBtn.textContent = "🌙";
+    }
+});
     </script>
 </body>
 </html>
