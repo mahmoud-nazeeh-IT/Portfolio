@@ -1227,48 +1227,69 @@
             display: block;
             }
 
-        .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 30px;
-    width: 100%;
-    max-width: 600px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.1);
-    background: rgba(255,255,255,0.05);
-    color: white;
-    font-size: 16px;
-    outline: none;
-    transition: 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #00bfff;
-    box-shadow: 0 0 10px rgba(0,191,255,0.3);
-}
-
-.contact-form button {
-    padding: 15px;
-    border: none;
-    border-radius: 12px;
-    background: #00bfff;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.contact-form button:hover {
-    transform: translateY(-3px);
-}
+                .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.05);
+            color: white;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #00bfff;
+            box-shadow: 0 0 10px rgba(0,191,255,0.3);
+        }
+        
+        .contact-form button {
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            background: #00bfff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .contact-form button:hover {
+            transform: translateY(-3px);
+        }
+        
+                .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 25px;
+        }
+        
+                .form-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        .form-subtitle {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
@@ -1674,6 +1695,15 @@
                 </div>
             </div>
         </div>
+        <h3 class="form-title">Send Me a Message</h3>
+
+            <p class="form-subtitle">
+                    Have a question or want to work together? Feel free to contact me.
+                    </p>
+
+        <form action="https://formsubmit.co/mahmoudnazeeh8@gmail.com" method="POST" class="contact-form">
+
+...
         <form action="https://formsubmit.co/mahmoudnazeeh8@gmail.com" method="POST" class="contact-form">
 
     <input type="text" name="name" placeholder="Your Name" required>
