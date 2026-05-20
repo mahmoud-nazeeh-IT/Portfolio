@@ -1291,46 +1291,30 @@
             margin-bottom: 25px;
             line-height: 1.6;
         }
-                       /* =========================
-           FINAL CLEAN FIX
-        ========================= */
-        
-        /* توحيد شكل كل السيكشنز */
-        section {
-            padding: 6rem 2rem;
-        }
-        
-        /* منع أي مسافات زيادة */
-        #contact {
-            margin: 0 auto;
-            max-width: 1400px;
-        }
-        
-        /* تصحيح محاذاة الفورم */
-        .contact-form-wrapper,
-        #contact {
-            text-align: left;
-        }
-        
-        /* منع أي shift يمين */
-        .section-title,
-        .form-subtitle,
-        .contact-form {
-            margin-left: 0;
-            margin-right: 0;
-        }
-        
-            /* تقليل المسافة بين contact واللي قبله */
-            #certifications {
-                padding-bottom: 4rem;
-            }
-            /* =========================
-       FIX LAST SECTION ALIGNMENT
-    ========================= */
-    
-    #contact {
-        transform: translateX(-25px);
-    }
+     /* =========================
+   FINAL CONTACT ALIGNMENT FIX
+========================= */
+
+#contact {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    box-sizing: border-box;
+}
+
+.contact-grid,
+.contact-form-wrapper {
+    width: 100%;
+}
+
+#contact .section-title,
+#contact .form-subtitle,
+#contact .contact-form {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
     </style>
 </head>
 <body>
