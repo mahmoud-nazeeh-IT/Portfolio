@@ -1321,6 +1321,12 @@ body.light {
     color: var(--text-primary);
 }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("YOUR_PUBLIC_KEY");
+  })();
+</script>
 </head>
 <body>
     <!-- Loading Screen -->
@@ -1739,7 +1745,7 @@ body.light {
         Have a question or want to work together? Feel free to contact me.
     </p>
 
-    <form action="https://formsubmit.co/mahmoudnazeeh8@gmail.com" method="POST" class="contact-form">
+    <form id="contact-form" class="contact-form">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="table">
     <input type="hidden" name="_next" value="https://google.com">
@@ -1967,6 +1973,21 @@ toggleBtn.addEventListener("click", () => {
     } else {
         toggleBtn.textContent = "🌙";
     }
+});
+        document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+        name: this.name.value,
+        email: this.email.value,
+        message: this.message.value
+    }).then(() => {
+        alert("Message sent successfully 🚀");
+        this.reset();
+    }).catch((error) => {
+        alert("Failed to send message ❌");
+        console.log(error);
+    });
 });
     </script>
 </body>
