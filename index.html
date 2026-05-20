@@ -1980,6 +1980,7 @@ toggleBtn.addEventListener("click", () => {
     emailjs.send("service_kt94iyh", "template_c8h0srm", {
         name: this.name.value,
         email: this.email.value,
+        subject: this.subject.value,
         message: this.message.value
     }).then(() => {
         alert("Message sent successfully 🚀");
