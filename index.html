@@ -118,14 +118,14 @@
 
         .loader-initials {
             font-family: 'Syne', sans-serif;
-            font-size: 5rem;
+            font-size: 3rem;
             font-weight: 800;
             background: linear-gradient(135deg, var(--indigo), var(--pink), var(--cyan));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             margin-bottom: 2rem;
-            animation: pulse 1s ease-in-out infinite;
+            animation: dotsBlink 1s infinite;
         }
 
         @keyframes pulse {
@@ -1320,6 +1320,14 @@ body.light {
     background: var(--bg-primary);
     color: var(--text-primary);
 }
+            @keyframes dotsBlink {
+        0%, 100% {
+            opacity: 0.2;
+        }
+        50% {
+            opacity: 1;
+        }
+    }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
@@ -1331,7 +1339,7 @@ body.light {
 <body>
     <!-- Loading Screen -->
     <div class="loader" id="loader">
-        <div class="loader-initials">Eng_Nazeeh</div>
+        <div class="loader-initials">...</div>
         <div class="loader-bar">
             <div class="loader-progress"></div>
         </div>
