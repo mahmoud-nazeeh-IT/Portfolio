@@ -1287,11 +1287,15 @@
 }
         
         .form-subtitle {
-    color: #475569;
+    color: rgba(255, 255, 255, 0.7);
     margin-bottom: 25px;
     line-height: 1.6;
 }
-        .theme-btn {
+
+/* Light Mode */
+body.light-mode .form-subtitle {
+    color: rgba(0, 0, 0, 0.6);
+}        .theme-btn {
     background: transparent;
     border: 1px solid rgba(255,255,255,0.2);
     color: white;
